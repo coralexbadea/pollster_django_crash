@@ -1,0 +1,16 @@
+
+windows:
+python -m venv venv
+venv\Scripts\activate
+pip install django
+django-admin startproject mysite
+python manage.py runserver
+python manage.py startapp polls
+"create models"
+"add 'polls.apps.PollsConfig' to settings INSTALLED_APPS"
+python manage.py makemigrations polls 
+python manage.py migrate
+"add to database from shell"
+python manage.py shell
+"create superuser"
+python manage.py createsuperuser
